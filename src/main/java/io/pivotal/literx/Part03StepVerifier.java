@@ -82,7 +82,7 @@ public class Part03StepVerifier {
 	void expect3600Elements(Supplier<Flux<Long>> supplier) {
 		StepVerifier.withVirtualTime(supplier)
       .thenAwait(Duration.ofSeconds(1))
-      .expectNextCount(360)
+      .expectNextCount(3600)
       .verifyComplete();
 	}
 
